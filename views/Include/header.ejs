@@ -1,0 +1,21 @@
+<header>
+    <div class="navbar">
+        <div class="logo_link">
+            <!-- logo -->
+            <p class="logo">RAISETICK</p>
+            <img class="debug" src="/images/debug.webp" alt="debug_img">
+            
+            <div class="links">
+                <% if(isLoggedIn===true) { %>
+                    <a href="/dashboard">Dashboard</a>
+                    <a href="/logout">Logout</a>
+                    <% } else { %>
+                        <a href="/newticket">Add New</a>
+                        <a href="/login">Login</a>
+                        <% } %>
+            </div>
+        </div>
+        
+
+    </div>
+</header>

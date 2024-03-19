@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>RAISETICK - dashboard</title>
+</head>
+
+<body>
+    <%- include('Include/header.ejs', {isLoggedIn, username}) %>
+        <div class="dashboard">
+            <p class="username">Hello <strong>
+                <%= username %></strong>, Welcome to your
+            
+        </p>
+            <h1>DASHBOARD</h1>
+          
+            <% if(tickets.length < 1) {%>
+                <h3>There are no tickets.</h3>
+                <% } else { %>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>Name</td>
+                                <td>Email</td>
+                                <td>View</td>
+                                <td>Edit</td>
+                                <td>Delete</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% tickets.map((ticket)=> { %>
+                                <tr>
+                                    <td>
+                                        <%= ticket.id %>
+                                    </td>
+                                    <td>
+                                        <%= ticket.name %>
+                                    </td>
+                                    <td>
+                                        <%= ticket.email %>
+                                    </td>
+                                    <td><a href="/view/<%= ticket.id%>">View</a></td>
+                                    <td><a href="/edit/<%= ticket.id%>">Edit</a></td>
+                                    <td><a href="/delete/<%= ticket.id%>">Delete</a></td>
+                                </tr>
+                                <% })%>
+                        </tbody>
+                    </table>
+                    <% } %>
+        </div>
+        <%- include('Include/footer.ejs') %>

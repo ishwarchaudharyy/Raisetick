@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    color: #091e42;
+  }
+  
+  p {
+    margin: 0;
+  }
+ 
+  
+  /* Header Styles */
+  header {
+    height: 50px;
+    width: 100%;
+    padding-top: 20px;
+    background-color: white;
+    box-shadow: 0 0 5px gray;
+    position: fixed;
+    
+  }
+  
+  .debug{
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    float: left;
+  }
+  
+  .navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo_link {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 30px;
+    font-weight: 600;
+  }
+  
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 15px;
+  }
+   
+  /* Footer Styles------------------------------------------------------------ */
+  footer {
+    height: 50px;
+    background-color: #d5a0fa;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* login style */
+  .login {
+    height: 84vh;
+    padding-top: 70px;
+    background-image: linear-gradient(#ece9ff, rgb(255, 255, 255));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9fafc;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  
+  .inputs {
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  
+  .loginBox {
+    height: auto;
+    width: 400px;
+    padding: 25px;
+    margin-top: 100px;
+    background-color: white;
+    box-shadow: 0px 0px 6px -3px #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .loginBox p {
+    color: #5e6c84;
+  }
+  
+  .form_button {
+    width: 350px;
+    height: 40px;
+    background-color: #1f69d7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .form_button:hover {
+    cursor: pointer;
+    background-color: #0747a6;
+  }
+  
+  .form_button:active {
+    background-color: #1f69d7;
+    outline: 2px rgb(117, 117, 246);
+  }
+
+  /* New Ticket */
+
+  .new_ticket {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    background-image: linear-gradient(#ece9ff, rgb(255, 255, 255));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9fafc;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  
+  .ticket_title {
+    font-size: 24px;
+  }
+  
+  label {
+    margin-top: 15px;
+    font-weight: 600;
+  }
+  
+  .inputs {
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  
+  .ticket_form {
+    height: auto;
+    width: 700px;
+    padding: 25px;
+    margin-top: 100px;
+    background-color: white;
+    box-shadow: 0px 0px 6px -3px #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login_form p {
+    color: #5e6c84;
+  }
+  
+  .form_button {
+    height: 40px;
+    background-color: #1f69d7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .form_button:hover {
+    cursor: pointer;
+    background-color: #0747a6;
+  }
+  
+  .form_button:active {
+    background-color: #1f69d7;
+    outline: 2px rgb(117, 117, 246);
+  }
+
+  /*ticket*/
+
+  .ticket {
+    height: 84vh;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ticketcopy {
+    margin-top: 50px;
+    font-size: 24px;
+    border:3px solid rgb(81, 8, 149);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 10px 10px 0 gray;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+
+  /*dashboard*/
+
+  .dashboard {
+    height: 84vh;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  table,
+  td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    font-size: 20px;
+  }
+  
+  table {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  
+  thead {
+    background-color: #be9cc4;
+    color: white;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #4c0b66;
+    padding: 5px 15px;
+  }
+  
+  a:hover{
+    color: #e6adfd;
+  }
+
+  .username{
+    font-size: 20px;
+  }
+  
+/*thank you */
+.container_ty {
+    height: 84vh;
+    padding-top: 70px;
+    background-image: linear-gradient(#ece9ff, rgb(255, 255, 255));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+
+
+

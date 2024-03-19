@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/js/tinymce/tinymce.min.js"></script>
+    <title>RAISETICK - edit ticket</title>
+    <script>
+        $(document).ready(function () {
+            tinymce.init({
+                selector: "textarea#message",
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <%- include('Include/header.ejs', {isLoggedIn, username}) %>
+        <div class="new_ticket">
+            <div class="ticket_form">
+                <p class="ticket_title">
+                    <strong>Update your ticket</strong>
+                </p>
+                <form action="/editprocess" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="<%= id %>">
+                    <input id="name" name="name" type="text" value="<%= name %>" placeholder="Name" class="inputs" />
+                    <input id="email" name="email" type="email" value="<%= email %>" placeholder="Email"
+                        class="inputs" />
+                    <input id="phone" name="phone" type="text" value="<%= phone %>" placeholder="Enter phone number"
+                        class="inputs" />
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" value="<%- message %>"><%- message %></textarea>
+                    <label for="ticketImage">Choose a file:</label>
+                    <input id="ticketImage" name="ticketImage" type="file" />
+                    <img src="/uploads/<%= imageName %>" alt="<%= imageName %>" height="150px" width="150px" />
+                    <Button type="submit" class="form_button">
+                        <strong>Update ticket</strong>
+                    </Button>
+                </form>
+            </div>
+        </div>
+        <%- include('Include/footer.ejs') %>
